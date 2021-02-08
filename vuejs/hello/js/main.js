@@ -5,15 +5,18 @@ var vm = new Vue({
         todos: [],
     },
     methods: {
-        addItem: function () {
+        addItem: function (event) {
             if (this.newItem == '') return;
 
             var todo = {
                 item: this.newItem,
-                isDown: false
+                isDone: false
             };
             this.todos.push(todo);
             this.newItem = '';
+        },
+        deleteItem: function (index) {
+            this.todos.splice(index, 1);
         }
     }
 })
