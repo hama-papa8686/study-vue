@@ -12,7 +12,7 @@ var vm = new Vue({
                 this.bpi = response.data.bpi
             }.bind(this))
             .catch(function (error) {
-                // console.log(error);
+                console.log(error);
                 this.hasError = true;
             }.bind(this))
             .finally(function () {
